@@ -1,24 +1,12 @@
-//
-//  ContentView.swift
-//  FirstApp
-//
-//  Created by Alexander Bollinger on 11/24/26.
-//
+import SwiftUI      // Loads the tool kit
 
-import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+struct ContentView: View {  // Makes ContentView
+    var body: some View {   // What it looks like
+        Text("Hi Alexander")// Shows these words
+        Text("Welcome Back")
     }
 }
 
 #Preview {
     ContentView()
-}
+}                  // Shows Screen in Preview Mode
