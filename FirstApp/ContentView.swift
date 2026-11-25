@@ -1,14 +1,22 @@
 import SwiftUI      // Loads the tool kit
 
-struct ContentView: View {  // Makes ContentView
-    var body: some View {   // What it looks like
-        Text("Hi Alexander B")// Shows these words
-        Text("Welcome Back")
-        Text("November 24th 2026")
-        
-    }
-}
-
+struct ContentView: View {  //creates/build "ContentView".{3-16}
+    @State private var tasks = ["Go to the bank", "Visit my folks","Go to the gym"]
+    
+    var body: some View {
+        NavigationStack {
+            List {
+                ForEach(tasks, id: \.self) { task in
+                    HStack {
+                        Image(systemName: "circle")
+                        Text(task)
+                    }  //Closes HStack
+                }      //Closes ForEach
+            }          //Closes List
+            .navigationTitle("Agenda")
+        }              //Closes NavigationStack
+    }                  //Closes body
+}                      //Closes struct
 #Preview {
-    ContentView()
-}                  // Shows Screen in Preview Mode
+        ContentView()
+    }
